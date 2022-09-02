@@ -51,20 +51,35 @@
               <fieldset>
                 <legend class="h2 text-center">Calculadora de Calorías</legend>
                 <div class="mb-3">
+                  <label for="nombreCompleto" class="form-label h6">Nombre</label>
+                  <input type="text" id="nombreCompleto" class="form-control" min="15" max="80" placeholder="Digíte su nombre completo">
+                </div>
+                <div class="mb-3">
                   <label for="edad" class="form-label h6">Edad</label>
                   <input type="number" id="edad" class="form-control" min="15" max="80" placeholder="Digíte su edad">
                 </div>
-
                 <div class="mb-3">
                   <label for="peso" class="form-label h6">Peso</label>
                   <input type="number" id="peso" class="form-control" placeholder="Digíte su peso en kilogramos">
                 </div>
-
                 <div class="mb-3">
                   <label for="altura" class="form-label h6">Altura</label>
                   <input type="number" id="altura" class="form-control" placeholder="Digíte su altura en centímetros">
                 </div>
-
+                <div class="mb-3">
+                  <label for="tipoDocumento" class="form-label h6">Tipo de documento</label>
+                  <select id="tipoDocumento"  class="form-select">
+                    <option></option>
+                    <option value="Cédula de ciudadanía">Cédula de ciudadanía</option>
+                    <option value="Tarjeta de identidad">Tarjeta de identidad</option>
+                    <option value="Número de pasaporte">Número de pasaporte</option>
+                    <option value="Cédula de extranjeria">Cédula de extranjeria</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="numeroDocumento" class="form-label h6">Número de documento</label>
+                  <input type="number" id="numeroDocumento" class="form-control" placeholder="Digíte su número de documento">
+                </div>
                 <div class="mb-3">
                   <label for="actividad" class="form-label h6">Actividad física</label>
                   <select id="actividad" class="form-select">
@@ -95,7 +110,7 @@
                 </section>
                 <hr>
                 <div class="d-flex justify-content-center my-3">
-                  <button type="submit" class="btn btn-danger w-75" style="font-size: 1.5rem">Calcular</button>
+                  <button type="submit" class="btn btn-danger w-75" id="modal-custom" style="font-size: 1.5rem">Calcular</button>
                 </div>
               </fieldset>
             </form>
@@ -129,7 +144,22 @@
           <li><a href="#">Acesorías</a></li>
         </ul>
       </div>
-
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Resultado calorias</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-primary">Guardar</button>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
         <p class="m-0"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero optio voluptate qui adipisci, hic voluptatibus totam dolorem cumque repellendus amet! Repudiandae, ab error unde porro sint fugit qui temporibus, consequatur dolores sit quas perspiciatis omnis magnam iure ut, quod dignissimos molestias voluptas architecto nam! Accusantium corporis sit eos dolorum accusamus.</span></p>
       </div>
